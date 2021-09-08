@@ -21,23 +21,23 @@ namespace TwoNumber_Calculator
 
         private void btnAdd(object sender, EventArgs e)
         {
-            total += Convert.ToInt32(num1.Text) + Convert.ToInt32(num2.Text);
+            total = Convert.ToInt32(num1.Text) + Convert.ToInt32(num2.Text);
             resultText.Text = total.ToString();
         }
 
         private void btnSub(object sender, EventArgs e)
         {
-            total += Convert.ToInt32(num1.Text) - Convert.ToInt32(num2.Text);
+            total = Convert.ToInt32(num1.Text) - Convert.ToInt32(num2.Text);
             resultText.Text = total.ToString();
         }
         private void btnMul(object sender, EventArgs e)
         {
-            total += Convert.ToInt32(num1.Text) * Convert.ToInt32(num2.Text);
+            total = Convert.ToInt32(num1.Text) * Convert.ToInt32(num2.Text);
             resultText.Text = total.ToString();
         }
         private void btnDiv(object sender, EventArgs e)
         {
-            total += Convert.ToDouble(num1.Text) / Convert.ToDouble(num2.Text);
+            total = Convert.ToDouble(num1.Text) / Convert.ToDouble(num2.Text);
             resultText.Text = total.ToString();
         }
         private void btnAC(object sender, EventArgs e)
@@ -49,12 +49,17 @@ namespace TwoNumber_Calculator
         }
         private void btnPerc(object sender, EventArgs e)
         {
-            total += Convert.ToDouble(num1.Text) * (Convert.ToDouble(num2.Text) *0.01);
+            total = Convert.ToDouble(num1.Text) * (Convert.ToDouble(num2.Text) *0.01);
             resultText.Text = total.ToString();
         }
         private void btnSqr(object sender, EventArgs e)
         {
-            total += Math.Sqrt(Convert.ToDouble(num1.Text));
+            total = Math.Sqrt(Convert.ToDouble(num1.Text));
+            resultText.Text = total.ToString();
+        }
+        private void btn2x(object sender, EventArgs e)
+        {
+            total += total ;
             resultText.Text = total.ToString();
         }
     }
